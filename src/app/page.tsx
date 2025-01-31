@@ -15,9 +15,9 @@ export default function Home() {
         <NavBar />
       </section>
 
-      <Count duration={3000} endNumber={100} startNumber={50} />
+      {/* <Count duration={3000} endNumber={100} startNumber={50} />
       <FeatureCard />
-      <CountCard />
+      <CountCard /> */}
     </div>
   );
 }
