@@ -31,7 +31,7 @@ const routes = [
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <section>
+    <section className="relative z-10">
       <nav className="flex bg-[#1F80F0] sm:bg-transparent py-8 px-6 sm:pt-4 sm:pb-6 items-center justify-between max-w-6xl mx-auto">
         <Image className="h-10 w-40" src={logo} alt="Logo" />
 
@@ -49,7 +49,7 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <button className="text-white text-xl border px-6 rounded-sm py-3 lg:block hidden">
+        <button className="text-white text-xl border px-8 rounded-sm py-3 lg:block hidden tracking-wide font-medium">
           Contact Us
         </button>
         <button
