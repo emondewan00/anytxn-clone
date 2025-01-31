@@ -40,7 +40,7 @@ export default function Home() {
               "polygon(67% 0, 100% 0, 100% 68%, 80% 100%, 0 100%, 32% 51%)",
           }}
         >
-          <Image className="object-cover h-full" src={hero} alt="" />
+          <Image className="object-cover h-[115%] w-[115%]" src={hero} alt="" />
         </div>
         <div
           className="absolute right-0 top-0 w-full h-full"
