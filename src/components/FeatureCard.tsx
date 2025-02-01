@@ -1,16 +1,24 @@
-import icon from "@/public/icons/ChevronRight.svg";
-import Image from "next/image";
+import React from "react";
+import { FeatureType } from "../data/features";
 
-const FeatureCard = () => {
+const FeatureCard: React.FC<FeatureType> = ({
+  color,
+  description,
+  icon,
+  title,
+}) => {
   return (
     <div className="bg-[#F8FCFF] p-8 rounded-[20px] max-w-96">
-      <Image src={icon} width={32} height={32} alt="icon" />
-      <h4 className="text-lg mt-6">Feature Title</h4>
-      <p className="mt-6 text-[#164377] text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-        quidem rerum rem neque culpa obcaecati iusto, eaque tempora quas
-        reprehenderit.
-      </p>
+      <div
+        className={` p-4 rounded-full inline-block `}
+        style={{
+          backgroundColor: color,
+        }}
+      >
+        {icon}
+      </div>
+      <h2 className="text-2xl mt-6 font-semibold">{title}</h2>
+      <p className="mt-6 text-[#164377] text-base">{description}</p>
     </div>
   );
 };
