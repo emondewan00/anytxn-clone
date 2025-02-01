@@ -4,53 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-const routes = [
-  {
-    id: 1,
-    name: "Solutions",
-    path: "/solutions",
-    icon: "",
-    active: false,
-  },
-  {
-    id: 2,
-    name: "Services",
-    path: "/services",
-    icon: "",
-    active: false,
-  },
-  {
-    id: 3,
-    name: "About Us",
-    path: "/about-us",
-    icon: "",
-    active: false,
-  },
-];
+import { routes } from "../data/routes";
+import NavItem from "./NavItem";
+import { IoIosArrowForward } from "react-icons/io";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   return (
-    <section className="relative z-10">
+    <section className="relative z-50">
       <nav className="flex bg-[#1F80F0] sm:bg-transparent py-8 px-6 sm:pt-4 sm:pb-6 items-center justify-between max-w-6xl mx-auto">
         <Image className="h-10 w-40" src={logo} alt="Logo" />
 
-        <ul className="hidden lg:flex ">
+        <ul className="hidden lg:flex relative *:text-white">
           {routes.map((route) => (
-            <li key={route.id}>
-              <Link
-                className={`mr-2 px-6 py-3 text-white  font-medium  ${
-                  route.active ? "text-gray-800" : ""
-                }`}
-                href={route.path}
-              >
-                {route.name}
-              </Link>
-            </li>
+            <NavItem key={route.id} menu={route} />
           ))}
         </ul>
-        <button className="text-white text-xl border px-8 rounded-sm py-3 lg:block hidden tracking-wide font-medium">
-          Contact Us
+        <button className="text-white text-xl border pl-8 pr-6 rounded-sm py-3 lg:flex lg:items-center lg:gap-x-2 hidden tracking-wide font-medium ">
+          Contact Us <IoIosArrowForward />
         </button>
         <button
           onClick={() => setIsActive(!isActive)}
@@ -69,9 +40,7 @@ const NavBar = () => {
           {routes.map((route) => (
             <li key={route.id}>
               <Link
-                className={` px-6 py-3 text-white  font-medium  block ${
-                  route.active ? "text-gray-800" : ""
-                }`}
+                className={` px-6 py-3 text-white  font-medium  block `}
                 href={route.path}
               >
                 {route.name}

@@ -1,3 +1,5 @@
+import SectionHeading from "./SectionHeading";
+
 const FeatureCard = ({
   subTitle,
   title,
@@ -38,12 +40,10 @@ const Philosophy = () => {
   return (
     <section className="max-w-6xl mx-auto">
       <div className="text-center">
-        <p className="uppercase text-blue-500 font-medium tracking-wide text-lg">
-          our Philosophy
-        </p>
-        <h1 className="text-heading text-6xl font-semibold mt-4">
-          Human-centred innovation
-        </h1>
+        <SectionHeading
+          subTitle=" our Philosophy"
+          title=" Human-centred innovation"
+        />
       </div>
       <div
         className=" gap-x-20 grid grid-cols-1

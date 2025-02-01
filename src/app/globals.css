@@ -3,3 +3,8 @@
 @theme {
   --color-heading: "#0B305B";
 }
+@media (min-width: 1024px) {
+  .banner {
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
+  }
+}
