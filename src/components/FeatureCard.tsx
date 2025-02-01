@@ -1,5 +1,5 @@
 import React from "react";
-import { FeatureType } from "../data/features";
+import { FeatureType } from "../data";
 
 const FeatureCard: React.FC<FeatureType> = ({
   color,

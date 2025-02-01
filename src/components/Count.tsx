@@ -1,14 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { CountType } from "../data";
 
-export type CountProps = {
-  duration: number; // duration of the animation in milliseconds
-  delay?: number; // delay in milliseconds
-  startNumber?: number;
-  endNumber: number;
-};
-
-const Count: React.FC<CountProps> = ({
+const Count: React.FC<CountType> = ({
   startNumber = 0,
   delay = 0,
   duration,

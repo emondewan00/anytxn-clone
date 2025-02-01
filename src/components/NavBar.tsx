@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { routes } from "../data/routes";
+import { routes } from "../data";
 import NavItem from "./NavItem";
 import { IoIosArrowForward } from "react-icons/io";
 

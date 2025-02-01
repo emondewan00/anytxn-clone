@@ -1,27 +1,6 @@
 import React from "react";
 import Count from "./Count";
-
-const cards = [
-  {
-    id: 1,
-    prefix: ">",
-    details: "Years of Experience",
-    count: { endNumber: 20, duration: 1000 },
-  },
-  {
-    id: 2,
-    suffix: "+",
-    details: "Financial Institutes",
-    count: { endNumber: 100, duration: 1000 },
-  },
-  {
-    id: 3,
-    prefix: ">",
-    suffix: "m",
-    details: "Customers Each",
-    count: { endNumber: 200, duration: 1000 },
-  },
-];
+import { countCards } from "../data";
 
 const CountCard = () => {
   return (
@@ -30,7 +9,7 @@ const CountCard = () => {
         TRUSTED BY THE BEST
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-around mt-6">
-        {cards.map((card) => (
+        {countCards.map((card) => (
           <div
             key={card.id}
             className="md:last:col-span-2 text-center  lg:last:col-span-1"
