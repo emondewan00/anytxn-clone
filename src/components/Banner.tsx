@@ -2,6 +2,7 @@ import Image from "next/image";
 import NavBar from "./NavBar";
 import hero from "@/public/backgrounds/hero.jpg";
 import { IoIosArrowForward } from "react-icons/io";
+import HeroSvg from "./HeroSvg";
 
 const Banner = () => {
   return (
@@ -11,7 +12,7 @@ const Banner = () => {
           background:
             "radial-gradient(134.02% 81.35% at -9.66% 129.92%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%)",
         }}
-        className="h-[85vh] flex flex-col relative banner"
+        className="h-[85vh] flex flex-col relative banner overflow-hidden"
       >
         <NavBar />
 
@@ -46,6 +47,7 @@ const Banner = () => {
               "linear-gradient(190deg, #1f80f0 15.05%, rgba(31, 128, 240, 0) 30.39%)",
           }}
         ></div>
+        <HeroSvg />
       </section>
       <div
         className="block lg:hidden translate-y-[-30%] -mb-[10%]"
