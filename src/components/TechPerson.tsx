@@ -7,8 +7,27 @@ import growth from "@/public/growth.png";
 import creditCard from "@/public/credit-card.png";
 import bank from "@/public/bank.png";
 import { motion } from "motion/react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TechPerson = ({ containerStyle }: { containerStyle?: string }) => {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    gsap.to(containerRef.current, {
+      y: "3%",
+      ease: "power2.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 2,
+      },
+    });
+  }, []);
   return (
     <div className={`relative ${containerStyle}`}>
       <Image
@@ -17,7 +36,8 @@ const TechPerson = ({ containerStyle }: { containerStyle?: string }) => {
         className="shadow-lg  w-[80%] object-cover mx-auto relative z-10"
       />
       <div
-        className="absolute w-full h-full top-0 inset-0"
+        ref={containerRef}
+        className="absolute w-full h-full top-0 inset-0 "
         style={{
           transform: "translate3d(0%, -4.82327%, 0px)",
           transition: "transform 2500ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",

@@ -17,11 +17,11 @@ export default function Home() {
       <Banner />
       <FinancialTechInnovation />
       <Philosophy />
-      {/* <div className="grid grid-cols-1 lg:grid-cols-3  gap-x-6 max-w-6xl mx-auto my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3  gap-x-6 max-w-6xl mx-auto my-10">
         {featureData.map((feature) => (
           <FeatureCard key={feature.id} {...feature} />
         ))}
-      </div> */}
+      </div>
       <FutureFinance />
       <CountCard />
       <div>

@@ -9,7 +9,7 @@ const FinancialTechInnovation = () => {
           subTitle="Powering the Future of Finance"
           title="Uncovering new ways to delight customers"
         />
-        <TechPerson containerStyle="block md:hidden" />
+        <TechPerson containerStyle="block md:hidden my-7" />
         <p className="text-heading mt-6 font-semibold">
           AnyTech is revolutionizing financial technology by introducing
           innovative and real-time transaction account processing capabilities,
