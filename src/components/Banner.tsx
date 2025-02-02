@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import hero from "@/public/backgrounds/hero.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import HeroSvg from "./HeroSvg";
+import HeroImage from "./HeroImage";
 
 const Banner = () => {
   return (
@@ -30,16 +31,7 @@ const Banner = () => {
             </button>
           </div>
         </div>
-
-        <div
-          className=" absolute right-0 top-0 w-[60%] h-full lg:block hidden"
-          style={{
-            clipPath:
-              "polygon(67% 0, 100% 0, 100% 68%, 80% 100%, 0 100%, 32% 51%)",
-          }}
-        >
-          <Image className="object-cover h-[115%] w-[115%]" src={hero} alt="" />
-        </div>
+        <HeroImage />
         <div
           className="absolute right-0 top-0 w-full h-full hidden lg:block"
           style={{
@@ -47,7 +39,7 @@ const Banner = () => {
               "linear-gradient(190deg, #1f80f0 15.05%, rgba(31, 128, 240, 0) 30.39%)",
           }}
         ></div>
-        <HeroSvg />
+        {/* <HeroSvg /> */}
       </section>
       <div
         className="block lg:hidden translate-y-[-30%] -mb-[10%]"

@@ -1,5 +1,5 @@
 import { IoIosArrowDown } from "react-icons/io";
-import { Route } from "../data/routes";
+import { type Route } from "../data";
 import Link from "next/link";
 
 const NavItem = ({ menu }: { menu: Route }) => {

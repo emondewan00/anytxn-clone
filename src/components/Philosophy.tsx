@@ -26,7 +26,7 @@ const InfoCard: React.FC<InfoCardType> = ({
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto">
+    <section className="max-w-6xl mx-auto my-8 overflow-hidden">
       <div className="text-center">
         <SectionHeading
           subTitle="Our Philosophy"

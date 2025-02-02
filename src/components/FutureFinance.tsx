@@ -22,8 +22,9 @@ const FutureFinance: React.FC = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto">
-      <div className="text-center">
+    <section className="max-w-[480px] md:max-w-[80%] lg:max-w-6xl mx-auto px-8 xl:px-0">
+      {/* Heading Section */}
+      <div className="text-center lg:mb-12">
         <SectionHeading
           title="The future of finance"
           subTitle="TECHNOLOGY BUILT FOR YOU"
@@ -31,7 +32,8 @@ const FutureFinance: React.FC = () => {
       </div>
 
       <div>
-        <div className="hidden md:grid  md:grid-cols-2 lg:grid-cols-4 gap-4 my-8">
+        {/* Button Navigation for Larger Screens */}
+        <div className="hidden lg:grid md:grid-cols-2 lg:grid-cols-4 gap-4 my-8">
           {slidData.map((slid, index) => (
             <button
               key={slid.id}
@@ -39,7 +41,7 @@ const FutureFinance: React.FC = () => {
                 ${
                   activeIndex === index
                     ? "bg-blue-500 text-white"
-                    : " text-blue-500 hover:bg-blue-50"
+                    : "text-blue-500 hover:bg-blue-50"
                 }
               `}
               onClick={() => handleButtonClick(index)}
@@ -49,29 +51,50 @@ const FutureFinance: React.FC = () => {
           ))}
         </div>
 
+        {/* Swiper Component */}
         <Swiper
           spaceBetween={20}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={handleSlideChange}
+          slidesPerView={1}
         >
           {slidData.map((slid) => (
             <SwiperSlide key={slid.id}>
-              <div className="bg-white rounded-2xl shadow-lg p-16 grid grid-cols-1 md:grid-cols-2 gap-x-10 h-full mb-5 min-h-[500px]">
-                <div>
-                  <SectionHeading
-                    subTitle={slid.subTitle}
-                    title={slid.title}
-                    styleTitle="text-2xl! lg:text-4xl! my-6"
-                  />
-                  <p className="font-medium">{slid.paragraphOne}</p>
-                  <br />
-                  <p>{slid.paragraphTwo}</p>
+              <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-2 gap-4 h-full mb-5 lg:min-h-[500px]">
+                <div className="space-y-6">
+                  <h4
+                    className={`text-blue-600 font-semibold uppercase tracking-wide `}
+                  >
+                    {slid.subTitle}
+                  </h4>
+
+                  <h1
+                    className={`font-semibold mt-4 text-heading text-pretty text-2xl lg:text-4xl my-6`}
+                  >
+                    {slid.title}
+                  </h1>
+                  <div className="relative mt-4 block md:hidden">
+                    <Image
+                      src={slid.img}
+                      width={300}
+                      height={200}
+                      className="object-cover rounded-lg object-center w-full h-full"
+                      alt="image"
+                    />
+                  </div>
+
+                  <p className="font-medium text-base md:text-lg">
+                    {slid.paragraphOne}
+                  </p>
+                  <p className="text-base md:text-lg">{slid.paragraphTwo}</p>
                 </div>
-                <div className="relative">
+                {/* image container  */}
+                <div className="relative mt-4 lg:mt-0 hidden md:block">
                   <Image
                     src={slid.img}
-                    fill
-                    className="object-cover rounded-lg object-center"
+                    width={400}
+                    height={300}
+                    className="object-cover rounded-lg object-center w-full h-full"
                     alt="image"
                   />
                 </div>
