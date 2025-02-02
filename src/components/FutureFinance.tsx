@@ -31,7 +31,7 @@ const FutureFinance: React.FC = () => {
       </div>
 
       <div>
-        <div className="hidden md:grid  md:grid-cols-2 lg:grid-cols-4 gap-x-4 my-8">
+        <div className="hidden md:grid  md:grid-cols-2 lg:grid-cols-4 gap-4 my-8">
           {slidData.map((slid, index) => (
             <button
               key={slid.id}

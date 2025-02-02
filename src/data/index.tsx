@@ -46,8 +46,8 @@ type CountType = {
 
 type CountCardType = {
   id: number;
-  suffix: string;
-  prefix: string;
+  suffix?: string;
+  prefix?: string;
   details: string;
   count: CountType;
 };

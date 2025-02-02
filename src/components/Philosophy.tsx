@@ -56,9 +56,9 @@ const Philosophy: React.FC = () => {
               y2="-4.15596e-07"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3B90F2">
+              <stop stopColor="#3B90F2">
                 <animate
-                  attributeName="stop-color"
+                  attributeName="stopColor"
                   values="#3B90F2; #FE8B53; #3B90F2"
                   dur="6s"
                   repeatCount="indefinite"
@@ -67,9 +67,9 @@ const Philosophy: React.FC = () => {
                   keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
                 />
               </stop>
-              <stop offset="1" stop-color="#FE8B53">
+              <stop offset="1" stopColor="#FE8B53">
                 <animate
-                  attributeName="stop-color"
+                  attributeName="stopColor"
                   values="#FE8B53; #3B90F2; #FE8B53"
                   dur="6s"
                   repeatCount="indefinite"
@@ -105,9 +105,9 @@ const Philosophy: React.FC = () => {
                 y2="135"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#00E9EA">
+                <stop stopColor="#00E9EA">
                   <animate
-                    attributeName="stop-color"
+                    attributeName="stopColor"
                     values="#00E9EA; #FE925E; #00E9EA"
                     dur="6s"
                     repeatCount="indefinite"
@@ -116,9 +116,9 @@ const Philosophy: React.FC = () => {
                     keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
                   />
                 </stop>
-                <stop offset="1" stop-color="#FE925E">
+                <stop offset="1" stopColor="#FE925E">
                   <animate
-                    attributeName="stop-color"
+                    attributeName="stopColor"
                     values="#FE925E; #00E9EA; #FE925E"
                     dur="6s"
                     repeatCount="indefinite"
@@ -152,9 +152,9 @@ const Philosophy: React.FC = () => {
                 y2="135"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FBBC05">
+                <stop stopColor="#FBBC05">
                   <animate
-                    attributeName="stop-color"
+                    attributeName="stopColor"
                     values="#FBBC05; #FE925E; #FBBC05"
                     dur="6s"
                     repeatCount="indefinite"
@@ -163,9 +163,9 @@ const Philosophy: React.FC = () => {
                     keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
                   />
                 </stop>
-                <stop offset="1" stop-color="#FE925E">
+                <stop offset="1" stopColor="#FE925E">
                   <animate
-                    attributeName="stop-color"
+                    attributeName="stopColor"
                     values="#FE925E; #FBBC05; #FE925E"
                     dur="6s"
                     repeatCount="indefinite"
@@ -201,9 +201,9 @@ const Philosophy: React.FC = () => {
                   y2="54.4989"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#00E9EA">
+                  <stop stopColor="#00E9EA">
                     <animate
-                      attributeName="stop-color"
+                      attributeName="stopColor"
                       values="#00E9EA; #FBBC05; #00E9EA"
                       dur="6s"
                       repeatCount="indefinite"
@@ -212,9 +212,9 @@ const Philosophy: React.FC = () => {
                       keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
                     />
                   </stop>
-                  <stop offset="1" stop-color="#FBBC05">
+                  <stop offset="1" stopColor="#FBBC05">
                     <animate
-                      attributeName="stop-color"
+                      attributeName="stopColor"
                       values="#FBBC05; #00E9EA; #FBBC05"
                       dur="6s"
                       repeatCount="indefinite"

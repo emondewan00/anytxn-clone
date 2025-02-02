@@ -8,3 +8,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
   }
 }
+
+.swiper-wrapper {
+  @apply flex items-center;
+}

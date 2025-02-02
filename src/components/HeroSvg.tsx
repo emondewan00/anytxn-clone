@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -162,9 +162,9 @@ const HeroSvg = () => {
             width="366"
             height="366"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -183,9 +183,9 @@ const HeroSvg = () => {
             width="377"
             height="377"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -204,9 +204,9 @@ const HeroSvg = () => {
             width="245.1"
             height="245.1"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -225,9 +225,9 @@ const HeroSvg = () => {
             width="239"
             height="239"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -246,9 +246,9 @@ const HeroSvg = () => {
             width="436"
             height="436"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -267,9 +267,9 @@ const HeroSvg = () => {
             width="263.1"
             height="263.1"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -288,9 +288,9 @@ const HeroSvg = () => {
             width="263.1"
             height="263.1"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -309,9 +309,9 @@ const HeroSvg = () => {
             width="89"
             height="89"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -331,8 +331,8 @@ const HeroSvg = () => {
             y2="18.7308"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint1_linear_132_3263"
@@ -342,8 +342,8 @@ const HeroSvg = () => {
             y2="333.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint2_linear_132_3263"
@@ -353,8 +353,8 @@ const HeroSvg = () => {
             y2="-69.4999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint3_linear_132_3263"
@@ -364,8 +364,8 @@ const HeroSvg = () => {
             y2="11.195"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint4_linear_132_3263"
@@ -375,8 +375,8 @@ const HeroSvg = () => {
             y2="-153"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white"></stop>
-            <stop offset="1" stop-color="#4B4B4B" stop-opacity="0"></stop>
+            <stop stopColor="white"></stop>
+            <stop offset="1" stopColor="#4B4B4B" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint5_linear_132_3263"
@@ -386,8 +386,8 @@ const HeroSvg = () => {
             y2="-312.773"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint6_linear_132_3263"
@@ -397,8 +397,8 @@ const HeroSvg = () => {
             y2="371.706"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint7_linear_132_3263"
@@ -408,8 +408,8 @@ const HeroSvg = () => {
             y2="81.3501"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#40FEFF"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#40FEFF"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint8_linear_132_3263"
@@ -419,8 +419,8 @@ const HeroSvg = () => {
             y2="-133.309"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint9_linear_132_3263"
@@ -430,8 +430,8 @@ const HeroSvg = () => {
             y2="217.15"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white"></stop>
-            <stop offset="1" stop-color="#4B4B4B" stop-opacity="0"></stop>
+            <stop stopColor="white"></stop>
+            <stop offset="1" stopColor="#4B4B4B" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint10_linear_132_3263"
@@ -441,8 +441,8 @@ const HeroSvg = () => {
             y2="76.952"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0"></stop>
           </linearGradient>
           <linearGradient
             id="paint11_linear_132_3263"
@@ -452,8 +452,8 @@ const HeroSvg = () => {
             y2="489.195"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint12_linear_132_3263"
@@ -463,8 +463,8 @@ const HeroSvg = () => {
             y2="53.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint13_linear_132_3263"
@@ -474,8 +474,8 @@ const HeroSvg = () => {
             y2="470.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint14_linear_132_3263"
@@ -485,8 +485,8 @@ const HeroSvg = () => {
             y2="-40.0002"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint15_linear_132_3263"
@@ -496,8 +496,8 @@ const HeroSvg = () => {
             y2="-254"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint16_linear_132_3263"
@@ -507,8 +507,8 @@ const HeroSvg = () => {
             y2="507.925"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0"></stop>
           </linearGradient>
           <linearGradient
             id="paint17_linear_132_3263"
@@ -518,8 +518,8 @@ const HeroSvg = () => {
             y2="179"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint18_linear_132_3263"
@@ -529,8 +529,8 @@ const HeroSvg = () => {
             y2="-36.3089"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint19_linear_132_3263"
@@ -540,8 +540,8 @@ const HeroSvg = () => {
             y2="53.9599"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
         </defs>
       </svg>
@@ -577,7 +577,7 @@ const HeroSvg = () => {
               ></path>
             </g>
           </g>
-          <g id="light" clip-path="url(#clip0_6_180)">
+          <g id="light" clipPath="url(#clip0_6_180)">
             <g id="Group_4" filter="url(#filter0_f_6_180)">
               <path
                 id="Vector_4"
@@ -614,9 +614,9 @@ const HeroSvg = () => {
             width="295"
             height="295"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -635,9 +635,9 @@ const HeroSvg = () => {
             width="245.1"
             height="245.1"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -656,9 +656,9 @@ const HeroSvg = () => {
             width="239"
             height="239"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -678,8 +678,8 @@ const HeroSvg = () => {
             y2="519.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint1_linear_6_180"
@@ -689,8 +689,8 @@ const HeroSvg = () => {
             y2="254.197"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint2_linear_6_180"
@@ -700,8 +700,8 @@ const HeroSvg = () => {
             y2="388.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#1F80F0"></stop>
-            <stop offset="1" stop-color="#0059BF" stop-opacity="0"></stop>
+            <stop stopColor="#1F80F0"></stop>
+            <stop offset="1" stopColor="#0059BF" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint3_linear_6_180"
@@ -711,8 +711,8 @@ const HeroSvg = () => {
             y2="221.805"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint4_linear_6_180"
@@ -722,8 +722,8 @@ const HeroSvg = () => {
             y2="89.6911"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0" stop-opacity="0.49"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0" stopOpacity="0.49"></stop>
           </linearGradient>
           <linearGradient
             id="paint5_linear_6_180"
@@ -733,8 +733,8 @@ const HeroSvg = () => {
             y2="399.15"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white"></stop>
-            <stop offset="1" stop-color="#4B4B4B" stop-opacity="0"></stop>
+            <stop stopColor="white"></stop>
+            <stop offset="1" stopColor="#4B4B4B" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="paint6_linear_6_180"
@@ -744,8 +744,8 @@ const HeroSvg = () => {
             y2="258.952"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#00E9EA"></stop>
-            <stop offset="1" stop-color="#1F80F0"></stop>
+            <stop stopColor="#00E9EA"></stop>
+            <stop offset="1" stopColor="#1F80F0"></stop>
           </linearGradient>
           <clipPath id="clip0_6_180">
             <rect

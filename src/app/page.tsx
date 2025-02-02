@@ -5,9 +5,11 @@ import FeatureCard from "../components/FeatureCard";
 import FinancialTechInnovation from "../components/FinancialTechInnovation";
 import FutureFinance from "../components/FutureFinance";
 import Philosophy from "../components/Philosophy";
-import { featureData, ourUsers } from "../data";
-import { IoIosArrowForward } from "react-icons/io";
+import { featureData } from "../data";
 import logo from "@/public/logo.svg";
+import NoLongerLegacy from "../components/NoLongerLegacy";
+import UserIcons from "../components/UserIcons";
+import UserIconsSlider from "../components/UserIconsSlider";
 
 export default function Home() {
   return (
@@ -22,42 +24,12 @@ export default function Home() {
       </div>
       <FutureFinance />
       <CountCard />
-      <div className="grid md:grid-cols-3 lg:grid-cols-5 relative max-w-6xl mx-auto items-center">
-        {ourUsers.map((user) => (
-          <Image
-            src={user.img}
-            className=" w-8/10"
-            width={150}
-            height={120}
-            alt="user image "
-            key={user.id}
-          />
-        ))}
+      <div>
+        <UserIcons />
+        <UserIconsSlider />
       </div>
 
-      <div
-        className="h-[60vh] lg:h-[530px] w-full text-white flex "
-        style={{
-          background:
-            "radial-gradient(24.45% 88.58% at 23.57% 2%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%)",
-          clipPath: " polygon(0 0, 100% 29%, 100% 100%, 0% 100%)",
-        }}
-      >
-        <div className="flex flex-col justify-center max-w-6xl w-full mx-auto px-8 lg:px-0">
-          <h1 className="text-3xl lg:text-5xl font-bold tracking-wider">
-            Legacy no longer
-          </h1>
-          <p className="text-xl my-4">
-            Talk to us to find out how we can transform your organization for
-            the feature
-          </p>
-          <div>
-            <button className="bg-[#FE8B53] rounded pl-10 pr-8 py-3 text-lg font-semibold w-full lg:w-auto inline-flex items-center gap-x-2 justify-center lg:justify-start">
-              Contact Us <IoIosArrowForward />
-            </button>
-          </div>
-        </div>
-      </div>
+      <NoLongerLegacy />
 
       <section className="bg-[#002045] py-12 ">
         <div className="max-w-6xl mx-auto flex justify-between">
