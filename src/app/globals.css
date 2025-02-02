@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-heading: "#0B305B";
+  --color-heading: #0B305B;
 }
 @media (min-width: 1024px) {
   .banner {

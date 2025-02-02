@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { InfoCardType, philosophyFeatureData } from "../data";
 import SectionHeading from "./SectionHeading";
+import diagramImg1 from "@/public/diagram.jpg";
+import diagramImg2 from "@/public/diagram2.jpg";
 
 const InfoCard: React.FC<InfoCardType> = ({
   subTitle,
@@ -33,7 +36,21 @@ const Philosophy: React.FC = () => {
           title="Human-centred Innovation"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 mt-8 h-96 relative">
+
+      <Image
+        className="block md:hidden my-6"
+        src={diagramImg1}
+        alt="diagram of core innovation"
+      />
+
+      <Image
+        className="hidden md:block lg:hidden my-6"
+        src={diagramImg2}
+        alt="diagram of core innovation"
+      />
+
+      {/* custom diagram show only large devices */}
+      <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-x-20 mt-8 h-96 relative">
         <InfoCard {...philosophyFeatureData[0]} />
         <svg
           width="10"

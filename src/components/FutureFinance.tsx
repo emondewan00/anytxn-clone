@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { useState, useRef } from "react";
 import { Swiper as SwiperType } from "swiper";
 import SectionHeading from "./SectionHeading";
@@ -57,6 +58,10 @@ const FutureFinance: React.FC = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={handleSlideChange}
           slidesPerView={1}
+          autoplay={{
+            delay: 2500,
+          }}
+          modules={[Autoplay]}
         >
           {slidData.map((slid) => (
             <SwiperSlide key={slid.id}>
