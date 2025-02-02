@@ -7,6 +7,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { routes } from "../data";
 import NavItem from "./NavItem";
 import { IoIosArrowForward } from "react-icons/io";
+import LanguageToggle from "./LanguageToggle";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +20,7 @@ const NavBar = () => {
           {routes.map((route) => (
             <NavItem key={route.id} menu={route} />
           ))}
+          <LanguageToggle />
         </ul>
         <button className="text-white text-xl border pl-8 pr-6 rounded-sm py-3 lg:flex lg:items-center lg:gap-x-2 hidden tracking-wide font-medium ">
           Contact Us <IoIosArrowForward />
@@ -48,7 +50,9 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-
+        <div className="flex justify-center mb-14 mt-6 text-white">
+          <LanguageToggle />
+        </div>
         <button className="text-white text-xl border px-6 rounded-sm py-3 w-full">
           Contact Us
         </button>

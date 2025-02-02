@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 const LegacySectionSvg = () => {
   return (
     <>
@@ -10,9 +12,19 @@ const LegacySectionSvg = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="cta-background-patterns">
-          <g
+          <motion.g
             id="dark-patterns"
-            //   style="transform: translate3d(1.24486%, -0.60236%, 0px); --motion-translateX: 0px; --motion-translateY: 0px; transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);"
+            initial={{
+              x: "2%",
+              y: "1%",
+            }}
+            animate={{ x: 0, y: 0 }}
+            transition={{
+              transform: {
+                duration: 1,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              },
+            }}
           >
             <g id="Vector" style={{ mixBlendMode: "multiply" }}>
               <path
@@ -90,10 +102,20 @@ const LegacySectionSvg = () => {
                 fill="url(#paint12_linear_1_547)"
               ></path>
             </g>
-          </g>
-          <g
+          </motion.g>
+          <motion.g
             id="light-patterns"
-            //   style="transform: translate3d(-0.746917%, 0.361416%, 0px); --motion-translateX: 0px; --motion-translateY: 0px; opacity: 1; transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);"
+            initial={{
+              x: "5%",
+              y: "-5%",
+            }}
+            animate={{ x: 0, y: 0 }}
+            transition={{
+              transform: {
+                duration: 1,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              },
+            }}
           >
             <g id="Vector_13" filter="url(#filter3_f_1_547)">
               <path
@@ -182,7 +204,7 @@ const LegacySectionSvg = () => {
                 fill="url(#paint28_linear_1_547)"
               ></path>
             </g>
-          </g>
+          </motion.g>
         </g>
         <defs>
           <filter

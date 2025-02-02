@@ -281,7 +281,7 @@ const philosophyFeatureData: InfoCardType[] = [
     title: "Cloud",
     paragraph: "Scale Resources easily on-demand.",
     subTitleColor: "text-[#38C4CB]",
-    containerStyle: "md:flex items-center",
+    containerStyle: "md:grid grid-cols-2 items-center",
     cardStyle: "w-full lg:min-w-56",
   },
   {
@@ -289,7 +289,7 @@ const philosophyFeatureData: InfoCardType[] = [
     title: "data",
     paragraph: "Valuable, actionable insights from mass data sources",
     subTitleColor: "text-[#F6D466]",
-    containerStyle: "md:flex items-center text-left",
+    containerStyle: "md:grid grid-cols-2 items-center text-left",
     cardStyle: "w-full! lg:min-w-56 text-center",
   },
 ];

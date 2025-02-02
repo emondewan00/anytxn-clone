@@ -82,7 +82,7 @@ const Philosophy: React.FC = () => {
           </defs>
         </svg>
 
-        <div className="rounded-lg shadow-md text-center bg-gradient-to-l from-[#E6F4FF] to-[#F8FCFF] px-4 md:px-10 md:flex w-full col-span-2 gap-x-16 relative ">
+        <div className="rounded-lg shadow-md text-center bg-gradient-to-l from-[#E6F4FF] to-[#F8FCFF] px-4 md:px-4 md:flex w-full col-span-2 md:gap-x-6 lg:gap-x-16 relative ">
           <InfoCard {...philosophyFeatureData[1]} />
           <svg
             width="100"

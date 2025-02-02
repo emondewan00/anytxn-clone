@@ -39,7 +39,7 @@ const Banner = () => {
               "linear-gradient(190deg, #1f80f0 15.05%, rgba(31, 128, 240, 0) 30.39%)",
           }}
         ></div>
-        {/* <HeroSvg /> */}
+        <HeroSvg />
       </section>
       <div
         className="block lg:hidden translate-y-[-30%] -mb-[10%]"

@@ -19,6 +19,7 @@ const HeroImage = () => {
           duration: 0.7,
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
+        className="h-full w-full"
       >
         <Image className="object-cover h-[115%] w-[115%]" src={hero} alt="" />
       </motion.div>
