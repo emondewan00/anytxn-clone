@@ -1,9 +1,10 @@
 import Image from "next/image";
-import NavBar from "./NavBar";
 import hero from "@/public/backgrounds/hero.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import HeroSvg from "./HeroSvg";
 import HeroImage from "./HeroImage";
+import NavBarDesktop from "./NavBarDesktop";
+import MobileNav from "./MobileNav";
 
 const Banner = () => {
   return (
@@ -13,11 +14,12 @@ const Banner = () => {
           background:
             "radial-gradient(134.02% 81.35% at -9.66% 129.92%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%)",
         }}
-        className="h-[85vh] flex flex-col relative banner overflow-hidden"
+        className="h-[85vh] flex flex-col relative banner overflow-hidden lg:px-4"
       >
-        <NavBar />
+        <NavBarDesktop />
+        <MobileNav />
 
-        <div className="flex-grow flex items-center justify-between max-w-6xl w-full mx-auto relative z-10 px-8 lg:px-0">
+        <div className="flex-grow flex items-center justify-between lg:max-w-6xl w-full mx-auto relative z-10 px-8 lg:px-0">
           <div className="text-white lg:w-[60%]">
             <h1 className="text-5xl lg:text-7xl font-semibold  tracking-wide leading-[100%] text-pretty">
               Embrace the future of finance
