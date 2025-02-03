@@ -1,6 +1,84 @@
 "use client";
-import { motion } from "motion/react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
 const LegacySectionSvg = () => {
+  const elementRef1 = useRef(null);
+  const elementRef2 = useRef(null);
+  useEffect(() => {
+    if (elementRef1.current) {
+      // Initial loading animation (from x: 2%, y: 1% to x: 0%, y: 0%)
+      gsap.fromTo(
+        elementRef1.current,
+        { x: "2%", y: "1%" },
+        {
+          x: "0%",
+          y: "0%",
+          duration: 1,
+          ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        }
+      );
+    }
+
+    // Mouse move animation (opposite direction)
+    const handleMouseMove = (e: MouseEvent) => {
+      if (elementRef1.current) {
+        const { clientX, clientY } = e;
+        const moveX = (window.innerWidth / 2 - clientX) * 0.03;
+        const moveY = (window.innerHeight / 2 - clientY) * 0.03;
+
+        gsap.to(elementRef1.current, {
+          x: moveX,
+          y: moveY,
+          duration: 0.5,
+          ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)", // Custom cubic bezier easing
+        });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    if (elementRef2.current) {
+      // Initial loading animation (from x: 5%, y: -5% to x: 0%, y: 0%)
+      gsap.fromTo(
+        elementRef2.current,
+        { x: "5%", y: "-5%" },
+        {
+          x: "0%",
+          y: "0%",
+          duration: 1,
+          ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        }
+      );
+    }
+
+    // Mouse move animation (same direction movement)
+    const handleMouseMove = (e: MouseEvent) => {
+      if (elementRef2.current) {
+        const { clientX, clientY } = e;
+        const moveX = (clientX - window.innerWidth / 2) * 0.03;
+        const moveY = (clientY - window.innerHeight / 2) * 0.03;
+
+        gsap.to(elementRef2.current, {
+          x: moveX,
+          y: moveY,
+          duration: 0.5,
+          ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <>
       {/* desktop svg */}
@@ -12,20 +90,7 @@ const LegacySectionSvg = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="cta-background-patterns">
-          <motion.g
-            id="dark-patterns"
-            initial={{
-              x: "2%",
-              y: "1%",
-            }}
-            animate={{ x: 0, y: 0 }}
-            transition={{
-              transform: {
-                duration: 1,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              },
-            }}
-          >
+          <g ref={elementRef1} id="dark-patterns">
             <g id="Vector" style={{ mixBlendMode: "multiply" }}>
               <path
                 d="M1968.32 314.946V192.878L1492.64 587.535H1639.77L1968.32 314.946Z"
@@ -102,21 +167,8 @@ const LegacySectionSvg = () => {
                 fill="url(#paint12_linear_1_547)"
               ></path>
             </g>
-          </motion.g>
-          <motion.g
-            id="light-patterns"
-            initial={{
-              x: "5%",
-              y: "-5%",
-            }}
-            animate={{ x: 0, y: 0 }}
-            transition={{
-              transform: {
-                duration: 1,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              },
-            }}
-          >
+          </g>
+          <g ref={elementRef2} id="light-patterns">
             <g id="Vector_13" filter="url(#filter3_f_1_547)">
               <path
                 d="M1764 384.676V268.997L1390 642.997H1505.68L1764 384.676Z"
@@ -204,7 +256,7 @@ const LegacySectionSvg = () => {
                 fill="url(#paint28_linear_1_547)"
               ></path>
             </g>
-          </motion.g>
+          </g>
         </g>
         <defs>
           <filter
