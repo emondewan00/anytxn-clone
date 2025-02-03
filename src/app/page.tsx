@@ -9,14 +9,21 @@ import UserIconsSlider from "../components/UserIconsSlider";
 import AntechSolutions from "../components/AntechSolutions";
 import Footer from "../components/Footer";
 import FeatureSlider from "../components/FeatureSlider";
+import SectionSvg from "../components/SectionSvg";
 
 export default function Home() {
   return (
     <main className=" bg-white">
       <Banner />
-      <FinancialTechInnovation />
+      <div>
+        <FinancialTechInnovation />
+        <SectionSvg />
+      </div>
       <Philosophy />
       <FeatureSlider />
+      <div>
+        <SectionSvg />
+      </div>
       <FutureFinance />
       <CountCard />
       <div>
