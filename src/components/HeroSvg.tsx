@@ -1,11 +1,73 @@
 "use client";
-import { motion } from "motion/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSvg = () => {
+  const elementRef1 = useRef(null);
+  const elementRef2 = useRef(null);
+  useEffect(() => {
+    // Initial loading animation (fade in & scale up)
+    gsap.fromTo(
+      elementRef1.current,
+      { x: "0%", y: "0%" },
+      {
+        x: "1.248%",
+        y: "-1.71213%",
+        duration: 1,
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      }
+    );
+
+    // Mouse move animation
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const moveX = (clientX - window.innerWidth / 2) * 0.03;
+      const moveY = (clientY - window.innerHeight / 2) * 0.03;
+
+      gsap.to(elementRef1.current, {
+        x: moveX,
+        y: moveY,
+        duration: 0.5,
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    // Reverse the initial loading animation (fade out & scale down)
+    gsap.fromTo(
+      elementRef2.current,
+      { x: "1.248%", y: "-1.71213%" },
+      {
+        x: "0%",
+        y: "0%",
+        duration: 1,
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      }
+    );
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const moveX = (window.innerWidth / 2 - clientX) * 0.03;
+      const moveY = (window.innerHeight / 2 - clientY) * 0.03;
+
+      gsap.to(elementRef2.current, {
+        x: moveX,
+        y: moveY,
+        duration: 0.5,
+        ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
   return (
     <>
       {/* desktop svg */}
@@ -18,15 +80,7 @@ const HeroSvg = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="hero-background-desktop">
-          <motion.g
-            id="background"
-            initial={{ x: "0%", y: "0%" }}
-            animate={{ x: "1.248%", y: "-0.71213%" }}
-            transition={{
-              duration: 0.5,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-          >
+          <g ref={elementRef1} id="background">
             <g id="Vector" style={{ mixBlendMode: "multiply" }}>
               <path
                 d="M668 23.4954V-382L-643 929H-237.504L668 23.4954Z"
@@ -107,16 +161,8 @@ const HeroSvg = () => {
                 fill="url(#paint13_linear_132_3263)"
               ></path>
             </g>
-          </motion.g>
-          <motion.g
-            id="foreground"
-            initial={{ opacity: 0, x: 0, y: 0 }}
-            animate={{ opacity: 1, x: "-0.7488%", y: "0.427278%" }}
-            transition={{
-              duration: 0.5,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-          >
+          </g>
+          <g id="foreground" ref={elementRef2}>
             <path
               id="Vector_13"
               d="M1563 30.6791V-85L1189 289H1304.68L1563 30.6791Z"
@@ -151,7 +197,7 @@ const HeroSvg = () => {
                 fill="url(#paint19_linear_132_3263)"
               ></path>
             </g>
-          </motion.g>
+          </g>
         </g>
         <defs>
           <filter
